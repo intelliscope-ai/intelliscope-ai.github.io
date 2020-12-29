@@ -1,0 +1,17 @@
+extends layout
+//- blocks define content injection points
+block title
+  title theBRIC | new page
+
+block description
+  meta(name='description', content='just a blank page')
+
+block extralinks
+//-   add custom links here
+//-   link(rel='stylesheet', type='text/css', href='/css/custom.css')
+
+block content 
+    section#header
+        div.container
+            h1.main blank page
+    p blank text
