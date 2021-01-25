@@ -26,6 +26,10 @@ app.get("/", (req, res) => {
 app.get("/newpage", (req, res) => {
   res.render("newpage", { var: "value" });
 });
+app.get("/project-page", (req, res) => {
+  res.render("project-page", { var: "value" });
+});
+
 
 /**
  * Server Activation
