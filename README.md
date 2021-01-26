@@ -1,18 +1,25 @@
-## Getting it up and running
+# Readme - Intelliscope Site
 
-#### Dependancies
+## Getting it up and running for development
+
+### Dependancies
 
 This depends on NodeJS. Install NodeJS before proceeding.
 
-#### Initial Installation
+### Initial Installation
 
 Navigate to the project root directory and run `npm install`. This will install all project dependancies. You may need to do this again if a module not found error appears after pulling a new version.
 
-#### Running development server
+### Running a local development server
 
 Navigate to project root directory and type `npm run dev` in terminal
 
 (Optional) install and setup browser-sync to autoreload page on modifications
+
+## Creating Static HTML files for hosting
+
+-   Install dependancies `npm install`
+-   Run gulp function to convert pug files to .html and save in public directory `gulp pugToHtml`
 
 ## Creating a new page
 
@@ -20,13 +27,34 @@ We will be using pug for templating and server side rendering. Pug templates don
 
 For CSS, enter html tag followed by a "." followed by class name. eg: `div.container.main` applies "container" and "main" css class to a div. You can also use `.container` as div tag is implied by default.
 
-#### Step 1 - Create new view
+### Steps
 
-- Inside `views` folder create a new `.pug` file. eg: newpage.pug
-- Add code to render page.
-- Modify `index.js` to handle new page.
+1. Inside `views` folder create a new `.pug` file. eg: newpage.pug
+2. Add pug code to render views on the page.
 
-Example:
+```js
+extends layout
+//- blocks define content injection points
+block title
+  title theBRIC | new page
+
+block description
+  meta(name='description', content='just a blank page')
+
+block extralinks
+//-   add custom links here
+//-   link(rel='stylesheet', type='text/css', href='/css/custom.css')
+
+block content
+    section#header
+        div.container
+            h1.main blank page
+    p blank text
+```
+
+3.  Modify `index.js` to handle new page.
+
+    Example:
 
 ```js
 ...
