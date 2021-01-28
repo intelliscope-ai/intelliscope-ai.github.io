@@ -10,6 +10,6 @@ function pugToHtml() {
                 pretty: true,
             })
         )
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest('docs'));
 }
 exports.pugToHtml = pugToHtml;
