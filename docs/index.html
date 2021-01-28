@@ -41,8 +41,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-6">
-            <h2>We developed CheXNeXt, a deep learning algorithm to concurrently detect 14 clinically important diseases in chest radiographs.</h2>
-            <p>Chest radiograph interpretation is critical for the detection of acute thoracic diseases, including tuberculosis and lung cancer, which affect millions of people worldwide each year. This time-consuming task typically requires expert radiologists to read the images, leading to fatigue-based diagnostic error and lack of diagnostic expertise in areas of the world where radiologists are not available.</p>
+            <h2>Here we present a low-cost wireless stethoscope with an artificial intelligence (AI) back-end to help both semi-trained and expert medical professionals to diagnose cardiac abnormalities </h2>
+            <p>The coronavirus pandemic has created a deleterious impact throughout the world. Developing countries are particularly hard-hit, as they scramble to use limited resources, both financial and personnel, to battle its growing spread. Novel cost effective medical devices which cater to the unique needs of this hour are therefore of utmost importance. Here we present a low-cost wireless stethoscope with an artificial intelligence (AI) back-end to help both semi-trained and expert medical professionals to diagnose cardiac abnormalities while wearing personal protective equipment or maintaining a safe distance from the patient. Cardiac complications are implicated in a significant portion of coronavirus patients, and patients with underlying cardiac diseases are known to be at a higher risk of mortality.  However, existing wireless stethoscopes with AI-support are either simply unaffordable or unavailable in many developing countries touting large populations (e.g. India, Brazil). Therefore, our stethoscope: the <b>Intelliscope</b>, can become a game-changer helping tackle this pandemic in such resource-constrained environments.</p>
           </div>
           <div class="col-sm-12 col-md-6 col-md-pull-6">
             <iframe width="100%" height="300px" src="https://www.youtube-nocookie.com/embed/bDfqPbMdl5g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -54,15 +54,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h2>CheXNeXt is trained to predict diseases on x-ray images and highlight parts of an image most indicative of each predicted disease.</h2>
-            <p>CheXNeXt is trained on the ChestX-ray14 dataset, one of the largest public repository of radiographs, containing 112,120 frontal-view chest radiographs of 30,805 unique patients. Each image in ChestX-ray14 was labeled using an automatic extraction method on radiology reports.</p>
-            <p>
-              CheXNeXt's training process consists of 2 consecutive stages to account for the partially incorrect labels in the ChestX-ray14 dataset.
-              First, an ensemble of networks is trained on the training set to predict the probability that each of the 14 pathologies is present in the image.
-              The predictions of this ensemble are used to relabel the training and tuning sets.
-              A new ensemble of networks are finally trained on this relabeled training set.
-            </p>
-            <p>Without any additional supervision, CheXNeXt produces heat maps that identify locations in the chest radiograph that contribute most to the network’s classification using class activation mappings (CAMs). </p>
+            <h2>Hardware content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac consectetur turpis, quis luctus risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed dignissim augue eros, at vulputate nibh vestibulum nec. Vestibulum aliquet sapien odio, vel ullamcorper tellus maximus quis. Cras maximus suscipit diam, lobortis fermentum turpis tincidunt nec. Fusce facilisis facilisis enim, in aliquam lorem porttitor sed. Aenean odio orci, fringilla et libero quis, blandit cursus odio. Pellentesque eget neque congue, sagittis dolor et, sollicitudin tellus. Phasellus velit quam, ultrices a ultrices at, accumsan vitae neque. Aliquam vulputate imperdiet metus nec fringilla. Vestibulum vel ante at massa rutrum gravida. Vivamus tempus, dolor nec dapibus pretium, ligula nisl iaculis diam, ac efficitur leo felis vel enim. Pellentesque mattis magna ut ornare ultrices. Praesent in sapien hendrerit felis fringilla vehicula a dignissim arcu. </p>
           </div>
           <div class="col-md-6"><img src="/projects/chexnext/img/chexnext-cams.png" style="max-height:700px;"></div>
         </div>
@@ -71,16 +64,24 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-6"><img src="/projects/chexnext/img/roc-compares.png"></div>
+          <div class="col-md-6"><img src="/img/pipeline.png"></div>
           <div class="col-md-6">
-            <h2>We compared CheXNeXt’s performance to the performance of 9 radiologists on a validation set.</h2>
-            <p>A validation set of 420 frontal-view chest radiographs was selected from ChestX-ray14 for radiologist annotation. The set was curated to contain at least 50 cases of each pathology according to the original labels provided in the dataset.</p>
+            <h2>Transfer Learning-Based Approach for Screening Pre-existing Heart Diseases Using Synchronized ECG Signals and Heart Sounds</h2>
             <p>
-               The majority vote of the annotations of 3 cardiothoracic specialist radiologists serves as the consensus reference standard for each image.
-              To compare to the algorithm, 6 board-certified radiologists from 3 academic institutions (average experience 12 years) and 3 senior radiology residents also annotated the validation set of 420 radiographs for all 14 labels.
-              The ROC curve of the algorithm is generated by varying the discrimination threshold (used to convert the output probabilities to binary predictions). The radiologist ROC curve is estimated by fitting an increasing concave curve to the radiologist operating points.
+               Diagnosing pre-existing heart diseases early in life is important as it helps 
+              prevent complications such as pulmonary hypertension, heart rhythm problems, 
+              blood clots, heart failure and sudden cardiac arrest. To identify such diseases, 
+              phonocardiogram (PCG) and electrocardiogram (ECG) waveforms convey important information. 
+              Therefore, effectively using these two modalities of data has the potential to improve the 
+              disease screening process. Here, we evaluate this hypothesis on a subset of the PhysioNet 
+              Challenge 2016 Dataset which contains simultaneously acquired PCG and ECG recordings. 
+              Our novel Dual-Convolutional Neural Network based approach uses transfer learning to tackle 
+              the problem of having limited amounts of simultaneous PCG and ECG data that is publicly available, 
+              while having the potential to adapt to larger datasets.
+              Comparisons with methods which used single or dual modality data show that our method can lead to better performance. 
+              Furthermore, our results show that individually collected ECG or PCG waveforms are able to provide transferable features
+              which could effectively help to make use of a limited number of synchronized PCG and ECG waveforms and still achieve significant classification performance.  
             </p>
-            <p>The algorithm achieved performance equivalent to the practicing radiologists on 10 pathologies, better on 1 pathology, and worse on 3 pathologies, on the AUC metric.</p>
           </div>
         </div>
       </div>
@@ -88,14 +89,10 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-7 col-md-push-5"><img src="/projects/chexnext/img/point-compares.png"></div>
+          <div class="col-md-7 col-md-push-5"><img src="/img/n.png"></div>
           <div class="col-md-5 col-md-pull-7">
-            <h2>We found that CheXNeXt can diagnose certain pathologies in chest radiographs at a level comparable to practicing radiologists.</h2>
-            <p>
-              CheXNeXt detected nodules with a sensitivity of 0.690 (95% CI 0.581–0.797) which was higher than the micro-average sensitivity of board-certified radiologists at 0.573 (95% CI 0.525–0.619). CheXNeXt maintained a high specificity of 0.900 (95% CI 0.867–0.931) in nodule detection compared with the radiologist score of 0.937 (95% CI 0.927–0.947).
-              The algorithm detected effusion with a specificity of 0.921 (95% CI 0.889–0.951), higher than micro-average board-certified radiologist specificity of 0.883 (95% CI 0.868–0.898) while achieving a sensitivity of 0.674 (95% CI 0.592–0.754), comparable to micro-average board-certified radiologist sensitivity of 0.761 (95% CI 0.731–0.790). 
-            </p>
-            <p>The average time for radiologists to complete labeling of 420 chest radiographs was 240 minutes (range 180–300 minutes). The deep learning algorithm labeled the same 420 chest radiographs in 1.5 minutes.</p>
+            <h2>Realtime processing</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac consectetur turpis, quis luctus risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed dignissim augue eros, at vulputate nibh vestibulum nec. Vestibulum aliquet sapien odio, vel ullamcorper tellus maximus quis. Cras maximus suscipit diam, lobortis fermentum turpis tincidunt nec. Fusce facilisis facilisis enim, in aliquam lorem porttitor sed. Aenean odio orci, fringilla et libero quis, blandit cursus odio. Pellentesque eget neque congue, sagittis dolor et, sollicitudin tellus. Phasellus velit quam, ultrices a ultrices at, accumsan vitae neque. Aliquam vulputate imperdiet metus nec fringilla. Vestibulum vel ante at massa rutrum gravida. Vivamus tempus, dolor nec dapibus pretium, ligula nisl iaculis diam, ac efficitur leo felis vel enim. Pellentesque mattis magna ut ornare ultrices. Praesent in sapien hendrerit felis fringilla vehicula a dignissim arcu.</p>
           </div>
         </div>
       </div>
@@ -118,13 +115,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7">
-            <h3>To learn more, <a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002686">read our publication</a> in PLOS Medicine.</h3><a class="btn btn-lg btn-default" href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002686">Read Paper</a>
+            <h3>To learn more, <a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002686">read our publication</a></h3><a class="btn btn-lg btn-default" href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002686">Read Paper</a>
             <div class="pad"></div>
             <p>
               If you have questions about our work,
               contact us at:
             </p>
-            <h4><code>pranavsr@cs.stanford.edu</code> and <code>jirvin16@cs.stanford.edu</code></h4>
+            <h4><code>hello@intelliscope.life</code> and <code>kithmin@intelliscope.life</code></h4>
           </div>
         </div>
       </div>
