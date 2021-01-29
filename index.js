@@ -15,7 +15,7 @@ const port = process.env.PORT || "8000";
  */
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "docs")));
 
 /**
  * Routes Definitions
@@ -30,8 +30,9 @@ app.get("/sample-project", (req, res) => {
   res.render("sample-project", { var: "value" });
 });
 
-
 /**
  * Server Activation
  */
-app.listen(port, () => console.log(`View BRIC site at  http://localhost:${port}`));
+app.listen(port, () =>
+  console.log(`View BRIC site at  http://localhost:${port}`)
+);
