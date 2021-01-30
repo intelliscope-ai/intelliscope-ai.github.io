@@ -1,0 +1,46 @@
+mixin team()
+  +profile('Ramith','AI Researcher','medium',false)
+  +profile('Udith','AI Researcher','big',false)
+  +profile('Kithmini','title',false,false)
+  +profile('Shehan','title',false,false)
+  +profile('Dineth','title',false,false)    
+  +profile('Hasindu','title',false,false) 
+  +profile('Sachini','title',false,false)       
+  +profile('Nuwan','title',false,false)
+  +profile('Kithmin','title',false,false)        
+
+mixin profile(name, position, use_placeholder, use_compact)
+  - s = ""
+  - if(use_compact === true) {
+  -   c = "col-md-1 col-xs-1"
+  -   s = "margin: 0px; padding: 0px"
+  - } else {
+  -   c = "col-xs-4 item-wrap col-sm-2"
+  - }
+  div(class=c, style=s)
+    +profile_inner(name, position, use_placeholder, use_compact)
+
+mixin profile_inner(name, position, use_placeholder, use_compact)
+  - if (position == 'uom') {
+  -   pos = 'Researcher'
+  - } else if (position == 'med') {
+  -   pos = 'Med Student'
+  - } else {
+  -   pos = position
+  - }
+  - if (use_placeholder == true) {
+  -   img_link = "Placeholder"
+  - } else {
+  -   img_link = name.replace(/ /g, '')
+  - }
+  if (use_compact === true)
+    img(src='/img/headshots/' + img_link + '.jpg', style="padding: 0px;margin: 0px")
+  else if(use_compact === 'big_compact')
+    img(src='/img/headshots/' + img_link + '.jpg', style="padding: 0px;margin: 0px")
+  else
+    .feature-item
+      img.img-circle(src='/img/headshots/' + img_link + '.jpg')
+      h4.compact-title #{name}
+      p.compact-subtitle #{pos}
+
+

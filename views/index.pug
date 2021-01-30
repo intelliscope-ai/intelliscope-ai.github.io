@@ -12,6 +12,7 @@ block extralinks
   link(rel='stylesheet', type='text/css', href='/projects/chexnext/css/chexnext.css')
 
 block extrascripts
+include includes/profiles
 
 block content
   section#header
@@ -77,6 +78,13 @@ block content
             | Towards this goal, the future of this research will depend on obtaining access to more sources of data for training and improving the model, as well as testing it on new populations and diagnoses. This additional data will help improve the accuracy and robustness of the model, making it more safe and effective. 
           a.btn.btn-lg.btn-default(href="https://goo.gl/forms/KS4b2h37i0vTRLRN2") Partner with us
   section
+    .container  
+      .row.text-center
+        h2 Our Team
+        p An awesome set of people
+      .row.text-center
+        +team
+  section.gray
     .container
       .row
         .col-md-7
