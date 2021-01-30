@@ -16,10 +16,15 @@ Navigate to project root directory and type `npm run dev` in terminal
 
 (Optional) install and setup browser-sync to autoreload page on modifications
 
+- Open new terminal and run `npm run ui-auto-reload`
+
+> **IMPORTANT** Note that if static files are present in the `doc/` then express server will deliver them instead of rendering the updated files. Delete the html files in '`doc/` when in development
+
 ## Creating Static HTML files for hosting
 
--   Install dependancies `npm install`
--   Run gulp function to convert pug files to .html and save in public directory `gulp pugToHtml`
+- Install dependancies `npm install`
+- Run gulp function to convert pug files to .html and save in public directory `gulp pugToHtml`
+- OR run `npm run build`
 
 ## Creating a new page
 
@@ -63,3 +68,7 @@ app.get("/linktopage", (req, res) => {
 });
 ...
 ```
+
+## Images
+
+Use [BRIME.net](https://www.birme.net/?auto_focal=true&convert_to_jpeg=true&quality=100) for bulk resizing images
