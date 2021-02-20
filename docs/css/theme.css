@@ -12,6 +12,10 @@
   padding: 0px;
 }
 
+.d-flex{
+display:-ms-flexbox;
+display:flex;
+}
 .programHeadline {
   background-color: #a90531;
   padding: 10px 15px;
