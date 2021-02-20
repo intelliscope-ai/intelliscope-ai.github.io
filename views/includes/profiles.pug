@@ -1,13 +1,15 @@
 mixin team()
-  +profile('Ramith','AI Researcher','medium',false)
-  +profile('Udith','AI Researcher','big',false)
-  +profile('Kithmini','title',false,false)
-  +profile('Shehan','title',false,false)
-  +profile('Dineth','title',false,false)    
-  +profile('Hasindu','title',false,false) 
-  +profile('Sachini','title',false,false)       
-  +profile('Nuwan','title',false,false)
-  +profile('Kithmin','title',false,false)        
+  +profile('Kithmin Wickremasinghe','Lead Researcher',false,false)   
+  +profile('Dineth Mudalige','Researcher',false,false)    
+  +profile('Hasindu Kariyawasam','Researcher',false,false) 
+  +profile('Kithmini Herath','Researcher',false,false)
+  +profile('Nuwan Bandara','Researcher',false,false)
+  +profile('Ramith Hettiarachchi','Researcher','medium',false)
+  +profile('Shehan Munasinghe','Researcher',false,false)
+  +profile('Sachini Chandanayake','Researcher',false,false)    
+  +profile('Udith Haputhanthri','Researcher','big',false)   
+
+     
 
 mixin profile(name, position, use_placeholder, use_compact)
   - s = ""
@@ -40,7 +42,7 @@ mixin profile_inner(name, position, use_placeholder, use_compact)
   else
     .feature-item
       img.img-circle(src='/img/headshots/' + img_link + '.jpg')
-      h4.compact-title #{name}
-      p.compact-subtitle #{pos}
+      h5.compact-Researcher #{name}
+      h6.compact-subResearcher #{pos}
 
 
