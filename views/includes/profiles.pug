@@ -15,7 +15,7 @@ mixin profile(name, position, use_placeholder, use_compact)
   - s = ""
   - if(use_compact === true) {
   -   c = "col-md-1 col-xs-1"
-  -   s = "margin: 0px; padding: 0px"
+  -   s = "margin: 0px; padding: 0px;"
   - } else {
   -   c = "col-xs-4 item-wrap col-sm-2"
   - }
@@ -36,9 +36,9 @@ mixin profile_inner(name, position, use_placeholder, use_compact)
   -   img_link = name.replace(/ /g, '')
   - }
   if (use_compact === true)
-    img(src='/img/headshots/' + img_link + '.jpg', style="padding: 0px;margin: 0px")
+    img(src='/img/headshots/' + img_link + '.jpg', style="padding: 0px;margin: 0px;margin-top:15px;")
   else if(use_compact === 'big_compact')
-    img(src='/img/headshots/' + img_link + '.jpg', style="padding: 0px;margin: 0px")
+    img(src='/img/headshots/' + img_link + '.jpg', style="padding: 0px;margin: 0px;margin-top:15px;")
   else
     .feature-item
       img.img-circle(src='/img/headshots/' + img_link + '.jpg')
