@@ -43,7 +43,7 @@ mixin profile_inner(name, position, use_placeholder, use_compact)
   - } else {
   -   img_link = name.replace(/ /g, '')
   - }
-  - if(position !='Researcher' || position!='Lead Researcher'){
+  - if(position !='Researcher' && position!='Lead Researcher'){
   -   name = "Dr. " + name
   - }
 
