@@ -9,6 +9,14 @@ mixin team()
   +profile('Sachini Chandanayake','Researcher',false,false)    
   +profile('Udith Haputhanthri','Researcher','big',false)   
 
+
+mixin mentors()
+  +profile('Chamira Edussooriya','Senior Lecturer',false,false)   
+  +profile('Anjula De Silva','Senior Lecturer',false,false)    
+  +profile('Duminda Samarasinghe','Cardiologist',false,false)
+  +profile('Janaka Senaratne','ENTC Alumni',false,false)    
+  
+
      
 
 mixin profile(name, position, use_placeholder, use_compact)
@@ -35,6 +43,10 @@ mixin profile_inner(name, position, use_placeholder, use_compact)
   - } else {
   -   img_link = name.replace(/ /g, '')
   - }
+  - if(position !='Researcher' || position!='Lead Researcher'){
+  -   name = "Dr. " + name
+  - }
+
   if (use_compact === true)
     img(src='/img/headshots/' + img_link + '.jpg', style="padding: 0px;margin: 0px;margin-top:15px;")
   else if(use_compact === 'big_compact')
